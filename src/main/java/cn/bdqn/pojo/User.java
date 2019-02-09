@@ -1,13 +1,25 @@
 package cn.bdqn.pojo;
 
+/**
+ * 员工实体类
+ */
 public class User {
 
     private Integer sn;//工号
     private Integer position_id;//职务编号
     private Integer department_id;//部门编号
+    private String name_cn;//职务名称
     private String name;//名字
     private String password;//登入密码
     private String status;//账号状态
+
+    public String getName_cn() {
+        return name_cn;
+    }
+
+    public void setName_cn(String name_cn) {
+        this.name_cn = name_cn;
+    }
 
     public Integer getSn() {
         return sn;

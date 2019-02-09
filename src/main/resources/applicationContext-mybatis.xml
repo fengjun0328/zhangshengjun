@@ -39,7 +39,7 @@
 			<aop:advisor advice-ref="myadvice" pointcut-ref="mypointcut"/>
 		</aop:config>
 		<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-			<property name="basePackage" value="cn.bdqn.mapper"/>
+			<property name="basePackage" value="cn.bdqn.dao"/>
 		</bean>
 
 </beans>

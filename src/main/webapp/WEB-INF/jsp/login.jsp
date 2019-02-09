@@ -26,14 +26,14 @@
 		width: 100%;
 		height: 186px;
 		margin: 147px auto 0;
-		background: url(/statics/images/login_01.gif) no-repeat center 0;
+		background: url(<%=request.getContextPath()%>/statics/images/login_01.gif) no-repeat center 0;
 	}
 	
 	.login-area {
 		width: 100%;
 		height: 140px;
 		margin: 0 auto;
-		background: url(/statics/images/login_02.gif) no-repeat center 0;
+		background: url(<%=request.getContextPath()%>/statics/images/login_02.gif) no-repeat center 0;
 	}
 	
 	.login-area form {
@@ -57,11 +57,11 @@
 		font: 12px/ 16px 宋体;
 	}
 	
-	input.login-sub {
+	#login-sub {
 		width: 104px;
 		height: 34px;
 		border: 0;
-		background: url(/statics/images/login_sub.gif) no-repeat 0px 1px; *
+		background: url(<%=request.getContextPath()%>/statics/images/login_sub.gif) no-repeat 0px 1px;
 		margin-top: 5px;
 	}
 	
@@ -69,7 +69,7 @@
 		width: 100%;
 		height: 30px;
 		margin: 18px auto 0;
-		background: url(/statics/images/copyright.gif) no-repeat center 0;
+		background: url(<%=request.getContextPath()%>/statics/images/copyright.gif) no-repeat center 0;
 	}
 </style>
 <script type="text/javascript">
@@ -92,7 +92,7 @@
 <body onload="check()">
 	<div class="login-top"></div>
 	<div class="login-area">
-		<form action="login.action">
+		<form action="dologin.html">
 			<label>
 				工&nbsp;&nbsp;号：
 			</label>
@@ -101,15 +101,16 @@
 				密&nbsp;&nbsp;码：
 			</label>
 			<input type="password" name="password" />
-			<%--<label>
+			<label>
 				验证码：
 			</label>
 			<input type="text" name="random" size="6" />
 			<input type="image" src="random.action"
-				onclick="changeValidateCode(this)" title="点击图片刷新验证码" />--%>
-			<input type="submit" class="login-sub" value="登入" />
-			<s:actionerror cssStyle="margin-top: 10px;"/>
+				onclick="changeValidateCode(this)" title="点击图片刷新验证码" />
+			<input type="submit" id="login-sub" value="" />
+			<%--<s:actionerror cssStyle="margin-top: 10px;"/>--%>
 			<input type="hidden" id="msg" value="${requestScope.msg }" />
+			<h3>${message}</h3>
 		</form>
 	</div>
 	<div class="login-copyright"></div>

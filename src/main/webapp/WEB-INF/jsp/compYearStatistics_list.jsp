@@ -1,5 +1,4 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags"  prefix="s"%>
 <%@ include file="taglib.jsp"%>
 <link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">

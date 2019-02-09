@@ -6,7 +6,7 @@
 <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>北大青鸟办公自动化管理系统</title>
-		<link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="<%=request.getContextPath() %>/statics/css/style.css" rel="stylesheet" type="text/css" />
 	</head>
 <body>
 <div class="action  divaction">

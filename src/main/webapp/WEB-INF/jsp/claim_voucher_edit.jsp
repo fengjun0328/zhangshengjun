@@ -1,12 +1,12 @@
 ﻿<%@ page language="java" pageEncoding="UTF-8"%>
-<%@ include file="common/taglib.jsp"%>
+<%@ include file="taglib.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>北大青鸟办公自动化管理系统</title>
-		<link href="<%=request.getContextPath() %>/css/style.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.8.0.min.js"></script>
+		<link href="<%=request.getContextPath()%>/statics/css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="${pageContext.request.contextPath}/statics/js/jquery-1.8.0.min.js"></script>
 		<script type="text/javascript">
 			$(function(){				
 			//表单提交校验
@@ -66,7 +66,7 @@
 		function delRow(id){	
 			var account = $("#account"+id).val();
 			$("#myTable tr").eq(id+1).remove();
-			//var rowNumber=$("#rowNumber").val();
+			var rowNumber=$("#rowNumber").val();
 				for(var s=id+1;s<rowNumber;s++){
 				$("#item"+s).attr("name","detailList["+(s-1)+"].item");
 				$("#item"+s).attr("id","item"+(s-1));
@@ -147,7 +147,7 @@
 						</td>
 						<td width="30%"><input type="text" name="claimVoucherDetail.account" id="account" /><span class=notice>*</span></td>
 						<td width="30%"><input type="text" name="claimVoucherDetail.desc" id="desc" /><span class=notice>*</span></td>
-						<td width="10%"><img src="${images}/add.gif" width="16" height="16" id="AddRow"/></td>
+						<td width="10%"><img src="/statics/images/add.gif" width="16" height="16" id="AddRow"/></td>
 					</tr>
 				</table>
 				<table>
